@@ -35,6 +35,7 @@ class CreateZenotiAppointmentTable extends Migration
             $table->string('therapist_request_type')->nullable();
             $table->string('room_name')->nullable();
             $table->string('equipment_name')->nullable();
+            $table->string('service_name')->nullable();
             $table->timestamps();
             $table->softDeletes();
             

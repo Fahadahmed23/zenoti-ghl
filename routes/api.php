@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\ZenotiContactController;
+use App\Http\Controllers\Api\ZenotiAppointmentGroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ use App\Http\Controllers\Api\ZenotiContactController;
 
 
 Route::post('zenoti-contacts', [ZenotiContactController::class, 'store']);
+
+Route::post('zenoti-appointment-groups/store-or-update', [ZenotiAppointmentGroupController::class, 'storeOrUpdate']);
