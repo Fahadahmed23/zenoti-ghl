@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\ZenotiContactController;
 use App\Http\Controllers\Api\ZenotiAppointmentGroupController;
+use App\Http\Controllers\Api\ZenotiInvoiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,7 @@ use App\Http\Controllers\Api\ZenotiAppointmentGroupController;
 Route::post('zenoti-contacts', [ZenotiContactController::class, 'store']);
 
 Route::post('zenoti-appointment-groups/store-or-update', [ZenotiAppointmentGroupController::class, 'storeOrUpdate']);
+
+Route::delete('zenoti-appointment-groups/delete', [ZenotiAppointmentGroupController::class, 'destroy']);
+
+Route::post('zenoti-revenue', [ZenotiInvoiceController::class, 'storeOrUpdateInvoiceData']);

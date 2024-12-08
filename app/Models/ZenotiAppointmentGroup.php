@@ -10,6 +10,9 @@ class ZenotiAppointmentGroup extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'zenoti_appointment_group';
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'appointment_group_status',
         'event_timestamp',

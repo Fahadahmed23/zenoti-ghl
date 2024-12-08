@@ -10,6 +10,9 @@ class ZenotiAppointment extends Model
 {
     use HasFactory, SoftDeletes;
 
+    protected $table = 'zenoti_appointment';
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'appointment_group_id',
         'appointments_id',
